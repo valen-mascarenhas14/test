@@ -1,9 +1,19 @@
+
+
+
 name: Frontend Tests
 
 on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
     paths:
       - 'a/**'
+
+jobs:
+  frontend-tests:
+    runs-on: ubuntu-latest
 
